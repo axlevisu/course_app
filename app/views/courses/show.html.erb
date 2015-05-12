@@ -1,0 +1,8 @@
+<%provide(:title, @course.code) %>
+<h1>Registered Students</h1>
+<p>Find me in app/views/courses/show.html.erb</p>
+<h2><%=@course.code + " " + @course.name %></h2>
+<%@students.each do |s|%>
+<h4><%=link_to s.name, student_path(s)%></h4>
+
+<%end%>
